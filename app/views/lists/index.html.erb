@@ -10,11 +10,11 @@
     <h3 class="mb-0">My Lists</h3>
     <%= link_to "Create a movie list", new_list_path, class: "btn btn-flat" %>
   </div>
-  <ul>
+  <%# <ul>
     <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list) %></li>
-    <% end %>
-</ul>
+      <%# <li><%= link_to list.name, list_path(list) %>
+    <%# <% end %>
+<%# </ul> %>
  <div class="row">
     <% @lists.each do |list| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
