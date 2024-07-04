@@ -1,4 +1,5 @@
 class ListsController < ApplicationController
+
   before_action :set_list, only: [:show, :destroy]
 
   def index
@@ -19,13 +20,13 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to lists_path
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @list.destroy
-    redirect_to lists_path, status: :see_other
+    # @list.destroy
+    # redirect_to lists_path, status: :see_other
   end
 
   private
