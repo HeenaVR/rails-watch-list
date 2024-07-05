@@ -56,19 +56,13 @@ Movie.create(title: "Ocean's Eight",
              poster_url: 'https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg',
              rating: 7.0)
 
-# bookmarks_data = [
-#   { list_id: 2, movie_id: 1, comment: 'good feel action movie!' },
-#   { list_id: 2, movie_id: 2, comment: 'A classic movie' }
-# ]
+List.create(name: 'Drama T')
+List.create(name: 'Rommance T')
 
-movie = Movie.find_by(title: 'Wonder Woman 1984')
+movie = Movie.first
 list1 = List.first
-list1.bookmarks.create(movie: movie, comment: "Great action sequences!")
+list1.bookmarks.create(movie: movie, comment: 'Great action sequences!')
 
-movie2 = Movie.find_by(title: 'The Shawshank Redemption')
+movie2 = Movie.last
 list2 = List.last
-list2.bookmarks.create(movie: movie2, comment: "A must-watch classic!")
-
-# bookmarks_data.each do |data|
-#   Bookmark.create(data)
-# end
+list2.bookmarks.create(movie: movie2, comment: 'A must-watch classic!')
