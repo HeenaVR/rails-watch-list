@@ -62,11 +62,11 @@ Movie.create(title: "Ocean's Eight",
 # ]
 
 movie = Movie.find_by(title: 'Wonder Woman 1984')
-list1 = List.find(2)
+list1 = List.first
 list1.bookmarks.create(movie: movie, comment: "Great action sequences!")
 
 movie2 = Movie.find_by(title: 'The Shawshank Redemption')
-list2 = List.find(3)
+list2 = List.last
 list2.bookmarks.create(movie: movie2, comment: "A must-watch classic!")
 
 # bookmarks_data.each do |data|
